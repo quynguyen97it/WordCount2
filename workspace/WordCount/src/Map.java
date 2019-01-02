@@ -15,8 +15,6 @@ public class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
 	    System.out.println("Found key "+ key.toString());
 		StringTokenizer tokenizer = new StringTokenizer(value.toString());
 		
-		//This is like a select word, 1 from values
-		//but map will also combine 1's from duplicates into a collection as the value of the map
 		while (tokenizer.hasMoreTokens()) {
 			word.set(tokenizer.nextToken());
 			
