@@ -11,13 +11,13 @@ import org.apache.hadoop.util.GenericOptionsParser;
 public class WordCount {
 	public static void main(String[] args) throws Exception {
 
-		if (args.length==0) {
-			args = new String[2];
-			args[0] = "hdfs://localhost:9000/WordCount/input.txt";
-			args[1] = "hdfs://localhost:9000/Output"; 
-		}
+	if (args.length==0) {
+		args = new String[2];
+		args[0] = "hdfs://localhost:9000/WordCount/input.txt";
+		args[1] = "hdfs://localhost:9000/Output"; 
+	}
 		
-		Configuration conf = new Configuration();
+	Configuration conf = new Configuration();
         GenericOptionsParser parser = new GenericOptionsParser(conf, args);
         args = parser.getRemainingArgs();
         
